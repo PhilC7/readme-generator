@@ -28,14 +28,10 @@ const questions = [
     {
         type: "list",
         name: "license",
-        message: "What is the title of your project?"
-    },
-    {
-        type: "input",
-        name: "title",
         message: "Choose a license",
-        choices: ["MIT", "Apache", "Boost 1.0", "EPL 1.0", "EPL 2.0", "None"],
+        choices: ["MIT", "Apache", "Boost", "EPL 1.0", "EPL 2.0", "None"],
     },
+
     {
         type: "input",
         name: "contribute",
@@ -67,7 +63,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((answer) => {
         const content = generateMarkdown(answer); // set variable to hold answers
-        writeToFile(generated_README.md, content);
+        writeToFile("generated_README.md", content);
     });
 }
 
