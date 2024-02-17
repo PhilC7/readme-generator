@@ -1,9 +1,10 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-  let badge;
-  const license = data.license;
+  let badge; // let variable to take link for license badge (const variable caused an error).
+  const license = data.license; // set data.license as a variable
 
+  // switch statement to determine license badge
   switch (license) {
     case "MIT":
       badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"

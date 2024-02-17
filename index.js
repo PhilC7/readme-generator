@@ -50,6 +50,7 @@ const questions = [
 
 ];
 
+
 // function to write README file
 function writeToFile(fileName, data) {
 
@@ -59,11 +60,12 @@ function writeToFile(fileName, data) {
     });
 }
 
+
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answer) => {
         const content = generateMarkdown(answer); // set variable to hold answers
-        writeToFile("generated_README.md", content);
+        writeToFile("generated_README.md", content); // call writeToFile function
     });
 }
 
